@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 // ignore: non_constant_identifier_names
 class BaseAppBar {
-  AppBar baseAppBar(
+  static AppBar baseAppBar(
     context, {
     List<Widget>? action,
     IconThemeData? actionsIconTheme,
