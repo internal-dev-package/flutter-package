@@ -33,7 +33,8 @@ class BaseAppBar {
       TextStyle? titleTextStyle,
       double? toolbarHeight,
       double toolbarOpacity = 1.0,
-      TextStyle? toolbarTextStyle}) {
+      TextStyle? toolbarTextStyle,
+      Key? key}) {
     return AppBar(
       actions: action,
       title: title,
@@ -64,6 +65,7 @@ class BaseAppBar {
       toolbarHeight: toolbarHeight,
       toolbarOpacity: toolbarOpacity,
       toolbarTextStyle: toolbarTextStyle,
+      key: key,
     );
   }
 }
