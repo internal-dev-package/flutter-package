@@ -8,3 +8,5 @@
 
 export 'source/base_widget_container.dart' show BaseWidgetContainer;
 export 'source/base_app_bar.dart' show BaseAppBar;
+export 'source/session_utility.dart' show SessionUtilities;
+export 'source/log_utility.dart' show LogUtility;
