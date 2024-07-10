@@ -1,29 +1,33 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_package/flutter_package.dart';
 import 'package:flutter_package/source/ctext_component.dart';
-import 'package:flutter_package/source/custom_button.dart';
-import 'package:flutter_package/source/default_screen_loading.dart';
 import 'package:flutter_package/source/otp_custom_component/otp_component.dart';
-import 'package:flutter_package/utils/constant_utils.dart';
 
 class OtpPageComponent extends StatelessWidget {
   const OtpPageComponent(
       {super.key,
-      required this.isLoading,
+      this.isLoading,
       required this.enableConfirmButton,
       required this.onConfirmPressed,
       this.confirmButtonLabel,
       required this.onResendCodePressed,
       this.onCodeTyping,
-      this.onGetCode});
+      this.onGetCode,
+      this.titleMessage,
+      this.resendCodeMessage,
+      this.resendCodeButtonMessage});
 
-  final bool isLoading;
+  final bool? isLoading;
   final bool enableConfirmButton;
   final VoidCallback onConfirmPressed;
   final VoidCallback onResendCodePressed;
   final String? confirmButtonLabel;
   final Function(String)? onCodeTyping;
   final Function(String)? onGetCode;
+
+  final String? titleMessage;
+  final String? resendCodeMessage;
+  final String? resendCodeButtonMessage;
 
   @override
   Widget build(BuildContext context) {
@@ -41,8 +45,8 @@ class OtpPageComponent extends StatelessWidget {
                 const SizedBox(
                   height: 16,
                 ),
-                const CText(
-                  text: 'Masukkan kode verifikasi',
+                CText(
+                  text: titleMessage ?? 'Masukkan kode verifikasi',
                   fontSize: 16,
                   fontWeight: FontWeight.w600,
                 ),
@@ -59,15 +63,15 @@ class OtpPageComponent extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const CText(
-                      text: "Tidak dapat kode? ",
+                    CText(
+                      text: resendCodeMessage ?? "Tidak dapat kode? ",
                       fontSize: 13,
                       fontWeight: FontWeight.w400,
                     ),
                     InkWell(
                       onTap: onResendCodePressed,
-                      child: const CText(
-                        text: "Kirim Ulang",
+                      child: CText(
+                        text: resendCodeButtonMessage ?? "Kirim Ulang",
                         fontSize: 13,
                         fontWeight: FontWeight.w900,
                         decoration: TextDecoration.underline,
@@ -91,7 +95,7 @@ class OtpPageComponent extends StatelessWidget {
               ),
             ),
           ),
-          isLoading ? const DefaultScreenLoading() : const SizedBox(),
+          isLoading ?? false ? const DefaultScreenLoading() : const SizedBox(),
         ],
       ),
     );
