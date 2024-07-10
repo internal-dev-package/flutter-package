@@ -4,4 +4,5 @@ class ImageUtils {
 
   // ICON
   static const String searchIcons = "${_icons}search-icon.png";
+  static const String checkmarkIcons = "${_icons}checkmark-icons.png";
 }
