@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_package/source/ccolor_utils.dart';
+import 'package:flutter_package/utils/ccolor_utils.dart';
 
 class CTextInput extends StatelessWidget {
   const CTextInput({
