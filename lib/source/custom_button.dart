@@ -46,11 +46,11 @@ class CustomButton extends StatelessWidget {
         style: ButtonStyle(
           backgroundColor: enableButton ?? false
               ? WidgetStateProperty.all<Color>(
-                  backgroundColors ?? ColorUtils.primaryColors,
+                  backgroundColors ?? CColorUtils.primaryColors,
                 )
               : WidgetStateProperty.all<Color>(
                   backgroundDisableColors ??
-                      ColorUtils.primaryColors.withOpacity(0.2),
+                      CColorUtils.primaryColors.withOpacity(0.2),
                 ),
           elevation: removeElevation ?? false
               ? WidgetStateProperty.all<double?>(0)
@@ -83,7 +83,7 @@ class CustomButton extends StatelessWidget {
                       fontSize: fontSize ?? 13,
                       fontWeight: fontWeight ?? FontWeight.w900,
                       fontStyle: fontStyle ?? FontStyle.normal,
-                      color: fontColor ?? ColorUtils.titleTextColor,
+                      color: fontColor ?? CColorUtils.titleTextColor,
                     ),
                   ),
                 ],
@@ -94,7 +94,7 @@ class CustomButton extends StatelessWidget {
                   fontSize: fontSize ?? 13,
                   fontWeight: fontWeight ?? FontWeight.w900,
                   fontStyle: fontStyle ?? FontStyle.normal,
-                  color: fontColor ?? ColorUtils.titleTextColor,
+                  color: fontColor ?? CColorUtils.titleTextColor,
                 ),
               ),
       ),

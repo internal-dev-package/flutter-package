@@ -14,9 +14,9 @@ class OtpComponent extends StatelessWidget {
       showFieldAsBox: true,
       onCodeChanged: onCodeChanged,
       onSubmit: onSubmit,
-      borderColor: ColorUtils.primaryColors,
-      enabledBorderColor: ColorUtils.borderColors,
-      focusedBorderColor: ColorUtils.borderColors,
+      borderColor: CColorUtils.primaryColors,
+      enabledBorderColor: CColorUtils.borderColors,
+      focusedBorderColor: CColorUtils.borderColors,
       borderRadius: const BorderRadius.all(
         Radius.circular(6),
       ),

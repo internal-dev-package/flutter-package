@@ -30,7 +30,7 @@ class CText extends StatelessWidget {
         fontSize: fontSize ?? 13,
         fontWeight: fontWeight ?? FontWeight.w400,
         fontStyle: fontStyle ?? FontStyle.normal,
-        color: textColor ?? ColorUtils.titleTextColor,
+        color: textColor ?? CColorUtils.titleTextColor,
         decoration: decoration,
       ),
     );

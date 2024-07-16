@@ -27,7 +27,7 @@ class AlertDialogComponent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      backgroundColor: ColorUtils.backgroundColors,
+      backgroundColor: CColorUtils.backgroundColors,
       icon: Image.asset(
         imageAssets ?? ImageUtils.checkmarkIcons,
         width: 76,
@@ -36,7 +36,7 @@ class AlertDialogComponent extends StatelessWidget {
       actionsAlignment: MainAxisAlignment.center,
       title: CText(
         text: message ?? "Selamat Bergabung Fadhil!!",
-        textColor: ColorUtils.titleTextColor,
+        textColor: CColorUtils.titleTextColor,
         fontSize: 16,
         fontWeight: FontWeight.w600,
       ),

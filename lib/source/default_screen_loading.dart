@@ -7,7 +7,7 @@ class DefaultScreenLoading extends StatelessWidget {
   final Color? backgroundColor;
   const DefaultScreenLoading({
     super.key,
-    this.indicatorColor = ColorUtils.primaryColors,
+    this.indicatorColor = CColorUtils.primaryColors,
     this.backgroundColor,
   });
 
