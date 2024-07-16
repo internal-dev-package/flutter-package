@@ -16,18 +16,20 @@ class CTextInput extends StatelessWidget {
     this.hintText,
     this.width,
     this.height,
-    this.filled,
+    this.filled = true,
     this.inputBackgroundColors,
     this.enableBorderColors,
     this.errorBorderColors,
     this.focusBorderColors,
     this.floatingLabelBehavior,
     this.enableInput = true,
+    this.preffixIcon,
   });
 
   final TextEditingController textController;
   final String? labelInput;
   final Widget? suffixIcon;
+  final Widget? preffixIcon;
   final bool? obscureText;
   final bool? isError;
   final String? errorMsg;
@@ -84,6 +86,7 @@ class CTextInput extends StatelessWidget {
           ),
         ),
         suffixIcon: suffixIcon,
+        prefixIcon: preffixIcon,
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(borderRadius ?? 10.0),
           borderSide: BorderSide(
