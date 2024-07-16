@@ -16,7 +16,9 @@ class CustomButton extends StatelessWidget {
       this.preffixIcons,
       this.enableButton = true,
       this.backgroundDisableColors,
-      this.buttonHeight});
+      this.buttonHeight,
+      this.borderColors,
+      this.borderRadius});
 
   final VoidCallback onPressed;
   final String titleButton;
@@ -31,6 +33,8 @@ class CustomButton extends StatelessWidget {
   final Widget? preffixIcons;
   final bool? enableButton;
   final double? buttonHeight;
+  final double? borderRadius;
+  final Color? borderColors;
 
   @override
   Widget build(BuildContext context) {
@@ -54,11 +58,13 @@ class CustomButton extends StatelessWidget {
           shape: WidgetStateProperty.all<OutlinedBorder?>(
             needBorder ?? false
                 ? RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
-                    side: const BorderSide(),
+                    borderRadius: BorderRadius.circular(borderRadius ?? 10),
+                    side: BorderSide(
+                      color: borderColors ?? const Color(0xFF000000),
+                    ),
                   )
                 : RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
+                    borderRadius: BorderRadius.circular(borderRadius ?? 10),
                   ),
           ),
         ),
