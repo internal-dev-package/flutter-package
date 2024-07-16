@@ -24,12 +24,16 @@ class CTextInput extends StatelessWidget {
     this.floatingLabelBehavior,
     this.enableInput = true,
     this.preffixIcon,
+    this.cursorColors,
+    this.keyboardType,
+    this.prefixText,
   });
 
   final TextEditingController textController;
   final String? labelInput;
   final Widget? suffixIcon;
   final Widget? preffixIcon;
+  final String? prefixText;
   final bool? obscureText;
   final bool? isError;
   final String? errorMsg;
@@ -45,15 +49,19 @@ class CTextInput extends StatelessWidget {
   final Color? errorBorderColors;
   final Color? focusBorderColors;
   final Color? inputBackgroundColors;
+  final Color? cursorColors;
+  final TextInputType? keyboardType;
   final FloatingLabelBehavior? floatingLabelBehavior;
 
   @override
   Widget build(BuildContext context) {
     return TextField(
+      cursorColor: cursorColors,
       controller: textController,
       obscureText: obscureText ?? false,
       onChanged: onTyping,
       enabled: enableInput,
+      keyboardType: keyboardType,
       decoration: InputDecoration(
         fillColor: inputBackgroundColors,
         filled: filled,
@@ -87,6 +95,7 @@ class CTextInput extends StatelessWidget {
         ),
         suffixIcon: suffixIcon,
         prefixIcon: preffixIcon,
+        prefixText: prefixText,
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(borderRadius ?? 10.0),
           borderSide: BorderSide(
