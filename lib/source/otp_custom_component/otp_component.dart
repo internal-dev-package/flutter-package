@@ -75,6 +75,7 @@ class OtpComponent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return OtpTextField(
+      keyboardType: TextInputType.number,
       cursorColor: cursorColors,
       numberOfFields: fieldNumber ?? 4,
       showFieldAsBox: true,
