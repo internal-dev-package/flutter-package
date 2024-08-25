@@ -32,6 +32,8 @@ class CTextInput extends StatelessWidget {
     this.prefixText,
     this.focusNode,
     this.focusNodeButtonColors,
+    this.maxLength,
+    this.maxLines,
   });
 
   final TextEditingController textController;
@@ -59,6 +61,8 @@ class CTextInput extends StatelessWidget {
   final TextInputType? keyboardType;
   final FloatingLabelBehavior? floatingLabelBehavior;
   final FocusNode? focusNode;
+  final int? maxLength;
+  final int? maxLines;
 
   KeyboardActionsConfig _buildConfig(BuildContext context) {
     return KeyboardActionsConfig(
@@ -109,6 +113,8 @@ class CTextInput extends StatelessWidget {
         onChanged: onTyping,
         enabled: enableInput,
         keyboardType: keyboardType,
+        maxLength: maxLength,
+        maxLines: maxLines,
         decoration: InputDecoration(
           fillColor: inputBackgroundColors,
           filled: filled,
